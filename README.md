@@ -39,15 +39,14 @@ Details in [`notes/oil_BVAR_finding.md`](notes/oil_BVAR_finding.md):
 
 | Path | Contents |
 |------|----------|
+| [`Slide_China_s_Crude_Oil_Research`](Slide_China_s_Crude_Oil_Research.pdf) | Slides of the value chain from crude oil to polyester in China, covering areas including market characteristics, data pattern, macroeconomic shock decomposition |
 | [`SC_research.ipynb`](SC_research.ipynb) | Layer 1 notebook — term structure, basis, EIA balance, utilization, warehouse receipts |
 | [`Script/BVAR_shock_model.ipynb`](Script/BVAR_shock_model.ipynb) | BVAR notebook — Gibbs sampler, IRFs, FEVD, shock decomposition |
 | [`code/`](code/) | Data fetch and build scripts (akshare, EIA, OilChem CSV) |
-| [`src/`](src/) | BVAR Gibbs sampler and helpers |
-| [`data/`](data/) | Curated CSV/JSON for offline reproducibility |
+| [`src/`](src/) | BVAR Gibbs sampler and helpers function |
+| [`data/`](data/) | Curated CSV/JSON dataset |
 | [`notes/`](notes/) | Findings, methodology, project status ([`notes/STATUS.md`](notes/STATUS.md)) |
-| [`research/`](research/) | Value chain and BVAR applicability notes (Layer 1 scope) |
-
-Layers 2–4 (PX, PTA, EG) and slide LaTeX sources are kept in a local **`backup/`** folder that is **not published** (see `.gitignore` below).
+| [`research/`](research/) | Value chain notes (Layer 1 scope) |
 
 ---
 
@@ -88,19 +87,6 @@ Run scripts from repo root, e.g. `python code/sc_basis.py`.
 **Identification:** recursive Cholesky — ε₁ supply, ε₂ aggregate demand, ε₃ oil-specific demand (precautionary in Kilian taxonomy).
 
 **Sample:** post–SC-era filter from 2018-03 in the notebook; full price splice 1987–2025.
-
----
-
-## About `.gitignore`
-
-This repo includes a [`.gitignore`](.gitignore) so that **local-only artifacts never get committed**:
-
-- **`backup/`** — archived Layer 2–4 code, data, and slide sources you may keep on disk but do not want public
-- **Python/Jupyter noise** — `__pycache__/`, `.ipynb_checkpoints/`, `.venv/`
-- **Secrets** — `.env` (e.g. `EIA_API_KEY`)
-- **OS files** — `.DS_Store`
-
-Git only tracks the curated research snapshot; the ignore file keeps accidental uploads out of [the public repo](https://github.com/restinghouse0203/China-sc-crude-oil-research).
 
 ---
 
