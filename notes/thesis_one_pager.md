@@ -1,7 +1,7 @@
 # Thesis One-Pager — Aromatics B (SC + TA + EG)
 
 **Phase 1 output** | Anchor combo **B (aromatics)** | Model: **BVAR centered on SC**  
-**Audience:** Clocktower investment team (FoF / allocator) | **Deck language:** English (Beamer)
+**Audience:** Investment team (FoF / allocator) | **Deck language:** English (Beamer)
 
 ---
 

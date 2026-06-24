@@ -1,9 +1,0 @@
-pandas>=2.0
-numpy>=1.24
-matplotlib>=3.7
-scipy>=1.10
-statsmodels>=0.14
-akshare>=1.12
-jupyter>=1.0
-requests>=2.28
-# WindPy — optional, proprietary; install from Wind terminal if using fetch_wind.py daily Dubai

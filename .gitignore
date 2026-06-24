@@ -1,4 +1,4 @@
-# Local archive — never publish
+# Local archive — never publish (Layer 2–4, slide LaTeX, WIP)
 backup/
 
 __pycache__/
@@ -7,7 +7,3 @@ __pycache__/
 .venv/
 .ipynb_checkpoints/
 .env
-
-# Deck — PDF only on GitHub
-deck/*
-!deck/main.pdf

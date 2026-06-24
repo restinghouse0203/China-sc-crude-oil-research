@@ -1,48 +1,53 @@
 # China-sc-crude-oil-research
 
-Research on **China INE SC crude** (Layer 1) and a **Kilian-type Bayesian VAR** for global structural oil shocks. Built for an investment-team presentation on China's chemical value chain.
+Research on **China INE SC crude** (Layer 1) and a **Kilian-type Bayesian VAR** for global structural oil shocks, in the context of China's chemical value chain.
 
-**Thesis:** Structural crude shocks (supply vs aggregate demand vs oil-specific / precautionary) transmit unevenly; this repo covers **Layer 1 landed-cost signals** and the **BVAR shock-regime module**. PTA/EG/PX (Layers 2–4) are archived locally only.
-
-**Stage:** 1 (frozen) | **As-of:** 2026-06-24 | **Scope:** Layer 1 + BVAR | **Deck:** PDF only
-
-See [STATUS.md](STATUS.md) for the module checklist.
+**Thesis:** Structural crude shocks (supply vs aggregate demand vs oil-specific / precautionary) transmit unevenly; this repo covers **Layer 1 landed-cost signals** and the **BVAR shock-regime module**.
 
 ---
 
 ## Key findings
 
-**Layer 1 (SC / refining)** — details in [`notes/layer1_finding.md`](notes/layer1_finding.md):
+### Weak refinery demand (China domestic story)
 
-- **Backwardation** on INE SC (−2.5 CNY/bbl front→6M) → near-term deliverable tightness
-- **SC discount vs Brent** (~−5 USD/bbl, z ≈ −1.7σ) → China landed-cost wedge, not offshore parity
-- **INE warehouse receipts** near multi-year lows (~2.96M bbl) → thin deliverable inventory
-- **Refinery CDU utilization 57.5%** (−16pp vs Feb 2026 baseline) → sharp run-cut phase
-- **Import dependence ~72%** (2024 EIA); runs fell faster than imports YoY
+China has **weak refining demand** against a backdrop of **elevated crude costs** and **Middle East conflict stress** (refinery utilization fell ~16pp vs the Feb 2026 baseline). Evidence from this repo:
 
-**BVAR** — details in [`notes/oil_BVAR_finding.md`](notes/oil_BVAR_finding.md):
+- **SC–Brent basis** — SC trades at a **discount** to Brent (~−5 USD/bbl, z ≈ −1.7σ) → China landed cost below offshore benchmarks despite global stress
+- **SC futures term structure** — **backwardation** (−2.5 CNY/bbl front→6M) → near-term physical tight, not a storage-glut curve
+- **Market volume** — front-month **open interest ~51k lots**; active SC continuous trading on INE
+- **INE warehouse receipts** — **downward trend** from ~10M to ~3M bbl (2024–2026), now plateauing near lows → deliverable inventory drawn down
+
+Together: refiners are **cutting runs** (CDU util **57.5%**) while deliverable SC stocks are **thin** — a demand-side margin squeeze, not a simple global fear-premium spike. Details in [`notes/layer1_finding.md`](notes/layer1_finding.md).
+
+### Layer 1 (SC / refining)
+
+- **Import dependence ~72%** (2024 EIA); refinery runs fell faster than imports YoY
+- **Refinery CDU utilization 57.5%** — teapots at **43.5%**, megaprojects **59.2%**
+
+### BVAR (global shock regime)
+
+Details in [`notes/oil_BVAR_finding.md`](notes/oil_BVAR_finding.md):
 
 - Kilian Cholesky: supply → activity → oil-specific demand on (`d_prod`, `rea`, `rpo_sc`)
 - **2024–25:** structural shock realizations **near zero** (muted global shock environment)
-- **Oil price channel:** oil-specific shock owns contemporaneous `rpo` moves; own-shock FEVD ~76% at h=15 months
-- **Combined read:** global precautionary premium quiet; China SC driven more by **domestic refining margin / deliverable frictions** (see deck)
+- **Oil price channel:** oil-specific shock moves `rpo` on impact; own-shock FEVD ~76% at h=15 months
+- **Combined read:** global precautionary premium quiet; SC dynamics driven more by **China refining margin / deliverable frictions**
 
 ---
 
-## Repository map
+## Repository structure
 
 | Path | Contents |
 |------|----------|
-| [`SC_research.ipynb`](SC_research.ipynb) | Layer 1 data pulls (term structure, basis, EIA, utilization, receipts) |
-| [`BVAR_shock_model.ipynb`](BVAR_shock_model.ipynb) | Gibbs BVAR, IRFs, FEVD, shock decomposition |
-| [`code/`](code/) | Reproducible fetch/build scripts |
+| [`SC_research.ipynb`](SC_research.ipynb) | Layer 1 notebook — term structure, basis, EIA balance, utilization, warehouse receipts |
+| [`Script/BVAR_shock_model.ipynb`](Script/BVAR_shock_model.ipynb) | BVAR notebook — Gibbs sampler, IRFs, FEVD, shock decomposition |
+| [`code/`](code/) | Data fetch and build scripts (akshare, EIA, OilChem CSV) |
 | [`src/`](src/) | BVAR Gibbs sampler and helpers |
-| [`data/`](data/) | Curated CSV/JSON (offline reproducibility) |
-| [`notes/`](notes/) | Findings and methodology notes |
-| [`research/`](research/) | Value chain context (Layer 1 scope in repo) |
-| [`deck/main.pdf`](deck/main.pdf) | Presentation slides (PDF only; LaTeX in local `backup/`) |
+| [`data/`](data/) | Curated CSV/JSON for offline reproducibility |
+| [`notes/`](notes/) | Findings, methodology, project status ([`notes/STATUS.md`](notes/STATUS.md)) |
+| [`research/`](research/) | Value chain and BVAR applicability notes (Layer 1 scope) |
 
-**Not on GitHub:** `backup/` (Layer 2–4 code, data, notes, deck sources) — gitignored.
+Layers 2–4 (PX, PTA, EG) and slide LaTeX sources are kept in a local **`backup/`** folder that is **not published** (see `.gitignore` below).
 
 ---
 
@@ -51,16 +56,15 @@ See [STATUS.md](STATUS.md) for the module checklist.
 ```bash
 python -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+pip install pandas numpy matplotlib scipy statsmodels akshare jupyter requests
 
-jupyter notebook SC_research.ipynb      # Layer 1
-jupyter notebook BVAR_shock_model.ipynb  # BVAR (12k Gibbs draws — allow several minutes)
-
-# Slides
-open deck/main.pdf
+jupyter notebook SC_research.ipynb
+jupyter notebook Script/BVAR_shock_model.ipynb   # 12k Gibbs draws — allow several minutes
 ```
 
 Run scripts from repo root, e.g. `python code/sc_basis.py`.
+
+**Optional:** `WindPy` (proprietary) for daily Dubai via `code/fetch_wind.py`; FRED/akshare fallbacks are documented in [`data/sc_data_sources.md`](data/sc_data_sources.md).
 
 ---
 
@@ -68,39 +72,50 @@ Run scripts from repo root, e.g. `python code/sc_basis.py`.
 
 | Script | Env / deps | Output |
 |--------|------------|--------|
-| `code/sc_basis.py` | akshare, FRED via akshare | `data/sc_basis_*.json/csv` |
+| `code/sc_basis.py` | akshare | `data/sc_basis_*` |
 | `code/sc_term_structure.py` | akshare INE | `data/sc_term_structure_*` |
 | `code/china_crude_supply_demand.py` | `EIA_API_KEY` optional | `data/china_crude_*` |
 | `code/fetch_refinery_utilization.py` | curated OilChem CSV | `data/china_refinery_utilization.csv` |
 | `code/build_oil_splice.py` | FRED + akshare | `data/oil_price_splice_*.csv` |
 | `code/build_data_csv.py` | Kilian + splice | `data/BVAR_data.csv` |
 
-See [`data/sc_data_sources.md`](data/sc_data_sources.md) and [`notes/bvar_data_sources.md`](notes/bvar_data_sources.md).
-
 ---
 
 ## Methodology (short)
 
-**Variables (BVAR):** global Δproduction, Kilian real activity index, log real oil price (`rpo_sc` = Brent pre-2018, INE SC post-2018).
+**BVAR variables:** global Δproduction, Kilian real activity index, log real oil price (`rpo_sc` = Brent pre-2018, INE SC post-2018).
 
-**Identification:** recursive Cholesky — ε₁ supply, ε₂ aggregate demand, ε₃ oil-specific demand (interpreted as **precautionary** in Kilian taxonomy).
+**Identification:** recursive Cholesky — ε₁ supply, ε₂ aggregate demand, ε₃ oil-specific demand (precautionary in Kilian taxonomy).
 
-**Sample:** BVAR estimation uses post–SC-era filter from 2018-03 in the notebook; full splice 1987–2025 for price history.
+**Sample:** post–SC-era filter from 2018-03 in the notebook; full price splice 1987–2025.
+
+---
+
+## About `.gitignore`
+
+This repo includes a [`.gitignore`](.gitignore) so that **local-only artifacts never get committed**:
+
+- **`backup/`** — archived Layer 2–4 code, data, and slide sources you may keep on disk but do not want public
+- **Python/Jupyter noise** — `__pycache__/`, `.ipynb_checkpoints/`, `.venv/`
+- **Secrets** — `.env` (e.g. `EIA_API_KEY`)
+- **OS files** — `.DS_Store`
+
+Git only tracks the curated research snapshot; the ignore file keeps accidental uploads out of [the public repo](https://github.com/restinghouse0203/China-sc-crude-oil-research).
 
 ---
 
 ## Limitations
 
-- Monthly global BVAR — informs **regime**, not day-trade SC timing
+- Monthly global BVAR — informs **regime**, not high-frequency SC trading
 - OilChem refinery utilization is a **curated weekly CSV**, not a live API
-- Short effective sample after 24 lags in SC era
-- Layers 2–4 (PX, PTA, EG) intentionally omitted from this repository
+- Short effective sample after lags in the SC era
+- Layers 2–4 (PX, PTA, EG) not included in this repository
 
 ---
 
 ## License & disclaimer
 
-MIT License. Research exercise for interview presentation — **not investment advice**.
+MIT License. Research project — **not investment advice**.
 
 ## Related
 

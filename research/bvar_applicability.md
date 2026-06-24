@@ -1,6 +1,6 @@
 # BVAR Project → China Chemical / Crude Oil Presentation
 
-Crosswalk from **Cornell ECON 7300 BVAR oil project** (Kilian 2009 extension) to the Clocktower presentation.
+Crosswalk from **Cornell ECON 7300 BVAR oil project** (Kilian 2009 extension) to this China SC / aromatics presentation.
 
 ---
 
@@ -24,7 +24,7 @@ Repo: https://github.com/restinghouse0203/Bayesian-Time-Series-Oil-Market-Foreca
 
 ### What transfers directly
 
-| Prior project | Clocktower presentation use |
+| Prior project | This presentation use |
 |---------------|----------------------------|
 | Shock decomposition (supply / agg demand / precautionary) | Explain **why** SC moved — e.g. 2022 rally ≠ 2008 demand boom |
 | IRFs with 68%/95% credible bands | Scenario fan charts for pass-through to TA/EG/PP margins |
@@ -101,7 +101,7 @@ Repo: https://github.com/restinghouse0203/Bayesian-Time-Series-Oil-Market-Foreca
 
 ---
 
-## How to pitch this to Clocktower (talking points)
+## Presentation talking points
 
 1. **"I don't treat oil as a single factor."** — Three shocks have different implications for naphtha margins and hedge ratios.
 2. **"Bayesian framework quantifies uncertainty for risk reporting."** — Credible bands on pass-through, not just point IRFs.

@@ -1,6 +1,6 @@
 # BVAR Data Assessment — Reusing Cornell Project for SC + Aromatics
 
-Assessment of variables in `ECON 7300 bayes time series/project/submit` for the Clocktower **Aromatics B** presentation, plus data sources for the adapted specification.
+Assessment of variables in `ECON 7300 bayes time series/project/submit` for the **Aromatics B** presentation, plus data sources for the adapted specification.
 
 **Project data path:** `/Users/tyau/Desktop/cornell course/spring/ECON 7300 bayes time series/project/submit/data/`
 
