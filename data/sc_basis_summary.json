@@ -1,0 +1,26 @@
+{
+  "as_of_utc": "2026-06-23T11:49:15.976644+00:00",
+  "latest_date": "2026-06-23",
+  "sc_cny_bbl": 491.4,
+  "sc_usd_bbl": 72.6,
+  "brent_usd_bbl": 77.54,
+  "dubai_usd_bbl": 102.28,
+  "cny_usd": 6.7686,
+  "basis_sc_minus_brent_usd": -4.94,
+  "basis_sc_minus_dubai_usd": -29.68,
+  "basis_sc_minus_brent_pct": -6.37,
+  "basis_zscore_3y": -1.7,
+  "basis_dubai_zscore_3y": -4.73,
+  "basis_mean_3y_usd": 0.75,
+  "basis_std_3y_usd": 3.34,
+  "basis_dubai_mean_3y_usd": -1.49,
+  "basis_dubai_std_3y_usd": 5.95,
+  "lookback_days": 756,
+  "sources": {
+    "sc": "akshare.futures_main_sina(symbol='SC0')",
+    "brent": "akshare.futures_foreign_hist(symbol='OIL') \u2014 ICE Brent daily proxy",
+    "dubai": "FRED POILDUBUSDM fallback (monthly ffill)",
+    "fx": "FRED DEXCHUS"
+  },
+  "interpretation": "Negative basis = SC below Brent/Dubai in USD (cheaper China landed cost); positive = premium vs offshore benchmarks after FX conversion."
+}

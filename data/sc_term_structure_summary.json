@@ -1,0 +1,18 @@
+{
+  "front_symbol": "SC2608",
+  "front_month": "2026-08",
+  "front_settle_cny_bbl": 510.5,
+  "front_open_interest": 50948,
+  "six_m_symbol": "SC2702",
+  "six_m_month": "2027-02",
+  "six_m_settle_cny_bbl": 508.0,
+  "months_apart": 6,
+  "spread_cny_bbl": -2.5,
+  "spread_pct_of_front": -0.4897159647404506,
+  "annualized_roll_yield_pct": -0.9794319294809012,
+  "term_structure": "backwardation",
+  "trade_date": "2026-06-22",
+  "as_of_utc": "2026-06-23T01:58:42.748505+00:00",
+  "source": "akshare.get_futures_daily(market='INE')",
+  "note": "Contango (positive front\u21926M spread) implies storage/carry incentive at INE bonded delivery sites; backwardation implies tight near-term supply."
+}

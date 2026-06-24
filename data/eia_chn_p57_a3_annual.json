@@ -1,0 +1,85 @@
+{
+  "fetched_at": 1782141124.255585,
+  "rows": [
+    {
+      "period": "2015",
+      "productId": "57",
+      "activityId": "3",
+      "activityName": "Imports",
+      "unit": "TBPD",
+      "value": "6918.356164383561643835616438356164"
+    },
+    {
+      "period": "2016",
+      "productId": "57",
+      "activityId": "3",
+      "activityName": "Imports",
+      "unit": "TBPD",
+      "value": "7620.109589041095890410958904109589"
+    },
+    {
+      "period": "2017",
+      "productId": "57",
+      "activityId": "3",
+      "activityName": "Imports",
+      "unit": "TBPD",
+      "value": "8403.287671232876712328767123287671"
+    },
+    {
+      "period": "2018",
+      "productId": "57",
+      "activityId": "3",
+      "activityName": "Imports",
+      "unit": "TBPD",
+      "value": "9238.060000000000000000000000000000"
+    },
+    {
+      "period": "2019",
+      "productId": "57",
+      "activityId": "3",
+      "activityName": "Imports",
+      "unit": "TBPD",
+      "value": "10185.479452054794520547945205479452"
+    },
+    {
+      "period": "2020",
+      "productId": "57",
+      "activityId": "3",
+      "activityName": "Imports",
+      "unit": "TBPD",
+      "value": "10855.068493150684931506849315068493"
+    },
+    {
+      "period": "2021",
+      "productId": "57",
+      "activityId": "3",
+      "activityName": "Imports",
+      "unit": "TBPD",
+      "value": "10320.547945205479452054794520547945"
+    },
+    {
+      "period": "2022",
+      "productId": "57",
+      "activityId": "3",
+      "activityName": "Imports",
+      "unit": "TBPD",
+      "value": "10470.410958904109589041095890410959"
+    },
+    {
+      "period": "2023",
+      "productId": "57",
+      "activityId": "3",
+      "activityName": "Imports",
+      "unit": "TBPD",
+      "value": "11300.000000000000000000000000000000"
+    },
+    {
+      "period": "2024",
+      "productId": "57",
+      "activityId": "3",
+      "activityName": "Imports",
+      "unit": "TBPD",
+      "value": "11100.000000000000000000000000000000"
+    }
+  ]
+}

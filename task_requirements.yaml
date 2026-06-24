@@ -1,0 +1,91 @@
+# Clocktower Investment Analyst — Presentation Task Requirements
+# Source: interview invitation email (June 2026)
+
+task:
+  type: investment_research_presentation
+  stage: interview_process
+  company: Clocktower Group
+  role: Investment Analyst
+  entity: Drobny (Shanghai) Investment Management Company
+
+topic:
+  title: "Mapping out China's chemical industry value chain and related commodity futures strategies"
+  title_zh: "中国化工产业链梳理及相关大宗商品期货策略"
+  scope:
+    - industry_value_chain_mapping
+    - commodity_futures_strategies
+    - china_focus
+
+purpose: >
+  Assess research approach, analytical framework, and ability to formulate
+  investment views across industries and markets.
+
+deliverables:
+  slides:
+    count: "5–8"
+    format: presentation_deck  # e.g. PowerPoint, Keynote, or PDF
+  live_session:
+    duration_minutes: "30–45"
+    includes_discussion: true
+    audience: entire_investment_team
+
+language:
+  allowed: [English, Chinese]
+  note: "Both presentation materials and discussion may be conducted in Chinese if preferred."
+
+structure_expectations:
+  demonstrate:
+    - industry_research_process
+    - key_analytical_frameworks
+    - translation_of_sector_insights_into_actionable_investment_views
+  focus_areas:
+    - areas_you_consider_most_important_and_relevant  # interviewer encourages discretion
+  evaluation_criteria:
+    - how_you_prioritize_information
+    - how_you_identify_key_drivers
+    - interaction_between_industry_fundamentals_and_commodity_futures_markets
+
+constraints:
+  slide_count_min: 5
+  slide_count_max: 8
+  presentation_minutes: 30
+  presentation_max_minutes: 45
+
+context_from_role:
+  firm_model: "FoF / allocator — monitors China & Asia hedge fund managers for institutional LPs"
+  relevant_skills:
+    - sector_research_for_investors
+    - linking_fundamentals_to_tradable_expressions
+    - risk_and_exposure_thinking
+  alignment_with_technical_assessment:
+    - commodity_futures_exposure_analytics
+    - cross_asset_risk_frameworks
+    - independent_research_execution
+
+suggested_content_pillars:
+  value_chain:
+    - upstream_feedstocks  # e.g. crude, coal, natural gas, naphtha
+    - midstream_basic_chemicals  # e.g. olefins, aromatics, methanol, ammonia
+    - downstream_specialty_and_end_use  # e.g. plastics, fibers, agrochemicals
+    - key_chinese_players_and_capacity_cycles
+  fundamentals:
+    - supply_demand_and_capacity_additions
+    - cost_curves_and_margins
+    - policy_and_environmental_regulation
+    - import_export_and_global_arbitrage
+  futures_linkage:
+    - relevant_chinese_futures_contracts  # e.g. SHFE, DCE, ZCE
+    - basis_spreads_and_term_structure
+    - inventory_and_seasonality
+    - macro_and_geopolitical_transmission
+  investment_views:
+    - directional_or_relative_value_theses
+    - risk_factors_and_scenario_analysis
+    - how_views_map_to_futures_or_equity_expressions
+
+logistics:
+  location: Shanghai_onshore_team
+  attendees: full_investment_team
+  prep_folder: >
+    Clocktower coding and financial knowledge test materials/
+    Presentation - China Chemical Industry Value Chain/

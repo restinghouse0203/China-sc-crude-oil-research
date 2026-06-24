@@ -1,0 +1,85 @@
+{
+  "fetched_at": 1782141124.255184,
+  "rows": [
+    {
+      "period": "2015",
+      "productId": "57",
+      "activityId": "1",
+      "activityName": "Production",
+      "unit": "TBPD",
+      "value": "4300.000000000000000000000000000000"
+    },
+    {
+      "period": "2016",
+      "productId": "57",
+      "activityId": "1",
+      "activityName": "Production",
+      "unit": "TBPD",
+      "value": "3995.890410958904109589041095890411"
+    },
+    {
+      "period": "2017",
+      "productId": "57",
+      "activityId": "1",
+      "activityName": "Production",
+      "unit": "TBPD",
+      "value": "3883.561643835616438356164383561644"
+    },
+    {
+      "period": "2018",
+      "productId": "57",
+      "activityId": "1",
+      "activityName": "Production",
+      "unit": "TBPD",
+      "value": "3847.945205479452054794520547945205"
+    },
+    {
+      "period": "2019",
+      "productId": "57",
+      "activityId": "1",
+      "activityName": "Production",
+      "unit": "TBPD",
+      "value": "3873.972602739726027397260273972603"
+    },
+    {
+      "period": "2020",
+      "productId": "57",
+      "activityId": "1",
+      "activityName": "Production",
+      "unit": "TBPD",
+      "value": "3898.630136986301369863013698630137"
+    },
+    {
+      "period": "2021",
+      "productId": "57",
+      "activityId": "1",
+      "activityName": "Production",
+      "unit": "TBPD",
+      "value": "3994.520547945205479452054794520548"
+    },
+    {
+      "period": "2022",
+      "productId": "57",
+      "activityId": "1",
+      "activityName": "Production",
+      "unit": "TBPD",
+      "value": "4087.671232876712328767123287671233"
+    },
+    {
+      "period": "2023",
+      "productId": "57",
+      "activityId": "1",
+      "activityName": "Production",
+      "unit": "TBPD",
+      "value": "4200.000000000000000000000000000000"
+    },
+    {
+      "period": "2024",
+      "productId": "57",
+      "activityId": "1",
+      "activityName": "Production",
+      "unit": "TBPD",
+      "value": "4324.684931506849433315068493150685"
+    }
+  ]
+}

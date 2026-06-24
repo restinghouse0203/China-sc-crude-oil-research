@@ -1,0 +1,36 @@
+{
+  "as_of_utc": "2026-06-23T12:08:21.566677+00:00",
+  "latest_date": "2026-06-23",
+  "receipt_bbl": 2961000,
+  "receipt_chg_day": 0,
+  "receipt_zscore_full_sample": -1.18,
+  "receipt_mean_bbl": 5346440.0,
+  "receipt_std_bbl": 2016916.0,
+  "receipt_min_bbl": 2557000,
+  "receipt_max_bbl": 10653000,
+  "change_20d_bbl": -550000,
+  "n_obs": 498,
+  "start_date": "2024-05-28",
+  "source": "akshare get_shfe_receipt_2/3 (SC via INE/SHFE warehouse API)",
+  "models": {
+    "linear_trend": {
+      "model": "OLS linear trend",
+      "n_obs": 498,
+      "intercept_bbl": 7945580.0,
+      "slope_bbl_per_day": -10459.3,
+      "slope_bbl_per_year": -2635748.0,
+      "r_squared": 0.5569,
+      "aic": 15469.9
+    },
+    "ar1_level": {
+      "model": "AR(1) on level",
+      "n_obs": 498,
+      "const": 5346440.0,
+      "ar1_coef": 0.9785,
+      "aic": 14321.3,
+      "bic": 14333.9,
+      "half_life_days": 31.9
+    }
+  },
+  "interpretation": "Rising receipts at INE delivery sites = storage build / deliverable supply; falling receipts = draw / tight physical. Compare with term structure and run-cuts."
+}

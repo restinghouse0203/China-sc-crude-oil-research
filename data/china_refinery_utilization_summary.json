@@ -1,0 +1,16 @@
+{
+  "as_of_utc": "2026-06-23T01:58:46.414197+00:00",
+  "latest_week_end": "2026-06-18",
+  "util_all_pct": 57.54,
+  "util_major_pct": 67.23,
+  "util_independent_pct": 43.47,
+  "util_megaproject_pct": 59.23,
+  "wow_change_all_pp": -0.89,
+  "vs_pre_conflict_baseline_pp": -15.84,
+  "pre_conflict_baseline_week": "2026-02-26",
+  "pre_conflict_baseline_all_pct": 73.38,
+  "cycle_phase": "sharp run-cut phase (utilization well below pre-shock baseline)",
+  "source": "OilChem (\u9686\u4f17\u8d44\u8baf)",
+  "source_url": "https://www.oilchem.net/26-0618-16-ec4c64f377cd3a47.html",
+  "notes": "CDU capacity utilization = crude throughput / nameplate CDU capacity. Independent (\u5730\u70bc) rate is the margin-sensitive teapot segment; megaproject (\u5927\u70bc\u5316) captures integrated coastal complexes (Hengli, Rongsheng, etc.)."
+}

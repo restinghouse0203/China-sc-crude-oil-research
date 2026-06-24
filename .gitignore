@@ -1,0 +1,13 @@
+# Local archive — never publish
+backup/
+
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+.ipynb_checkpoints/
+.env
+
+# Deck — PDF only on GitHub
+deck/*
+!deck/main.pdf
