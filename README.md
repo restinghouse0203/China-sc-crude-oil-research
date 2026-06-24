@@ -1,6 +1,6 @@
 # China-sc-crude-oil-research
 
-Research on **China INE SC crude** (Layer 1) and a **Kilian-type Bayesian VAR** for global structural oil shocks. Built for a Clocktower investment-team presentation on China's chemical value chain.
+Research on **China INE SC crude** (Layer 1) and a **Kilian-type Bayesian VAR** for global structural oil shocks. Built for an investment-team presentation on China's chemical value chain.
 
 **Thesis:** Structural crude shocks (supply vs aggregate demand vs oil-specific / precautionary) transmit unevenly; this repo covers **Layer 1 landed-cost signals** and the **BVAR shock-regime module**. PTA/EG/PX (Layers 2–4) are archived locally only.
 
