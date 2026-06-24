@@ -1,9 +1,0 @@
-# Local archive — never publish (Layer 2–4, slide LaTeX, WIP)
-backup/
-
-__pycache__/
-*.pyc
-.DS_Store
-.venv/
-.ipynb_checkpoints/
-.env
